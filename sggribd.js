@@ -1,4 +1,5 @@
 var fff = document.getElementById('b');
+var scribox = document.getElementById('jesus')
 var images = [
   "https://i.pinimg.com/736x/42/14/c1/4214c1c2a3552a032972ff4ecb46144a.jpg",
   "https://i.pinimg.com/736x/7b/d7/6c/7bd76c070b5b685f2ce78256dce76bc1.jpg",
@@ -16,3 +17,7 @@ setInterval(function() {
     i = 0;
   }
 }, 2000);
+
+function execute() {
+  console.log(scribox.innerHTML)
+}
