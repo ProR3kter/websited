@@ -10,7 +10,7 @@ setInterval(function() {
   if (!fff) {
     fff = document.getElementById('b'); // In case it changes
   }
-  fff.outerHTML = `<img src='${images[i]}' id='b'>`;
+  fff.src = images[i];
   i++;
   if (i >= images.length) {
     i = 0;
