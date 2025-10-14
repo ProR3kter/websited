@@ -25,6 +25,8 @@
       var elems = document.body.getElementsByTagName("*");
       for (var elem of elems) {
         console.log(elem);
+        var omaga=elem.outerHTML;
+        if (omaga.includes("<script")) {console.log("its a sckript !!")}
       }
     }
   </script>
