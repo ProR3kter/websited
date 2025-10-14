@@ -20,5 +20,12 @@
   <div>
     >>
   </div>
-  <script src="other_sggribd.js"></script>
+  <script>
+    function explode() {
+      var elems = document.body.getElementsByTagName("*");
+      for (var elem of elems) {
+        console.log(elem);
+      }
+    }
+  </script>
 </html>
