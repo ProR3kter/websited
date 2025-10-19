@@ -58,9 +58,12 @@
     <img src="https://i.pinimg.com/736x/3d/6d/93/3d6d93a14e8e12b2b2f092bb5e219572.jpg" id="b">
   <p> I hate this website </p>
   <script>
-    for (let i = 0; i < 19; i++){
-      var d=document.createElement('b')
-      d.outerHTML=`<b id='toremember'> ${i}/10/2025 ; I want to kill myself </b>`
+    for (let i = 0; i < 19; i++) {
+      var d = document.createElement('b');
+      d.id = "toremember";
+      d.textContent = ` ${i}/10/2025 ; I want to kill myself `;
+      document.body.appendChild(d);
+      document.body.appendChild(document.createElement("br"));
     }
   </script>
   <b id="toremember"> 05/10/2025 ; I want to kill myself  </b>
