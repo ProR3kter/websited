@@ -58,19 +58,19 @@
     <img src="https://i.pinimg.com/736x/3d/6d/93/3d6d93a14e8e12b2b2f092bb5e219572.jpg" id="b">
   <p> I hate this website </p>
   <script>
-    var m = 1
-    for (let i = 1; i <= 30; i++) {
-      if (!(m==12)) {
-      var d = document.createElement('b');
-      d.id = "toremember";
-      d.textContent = ` ${i}/${m}/2025 ; I want to kill myself `;
-      document.body.appendChild(d);
-      document.body.appendChild(document.createElement("br"));
-      if (i==30) {
-        m++;
-      }
-      }
+var m = 1;
+for (let i = 1; i <= 30; i++) {
+  if (m != 12) {
+    var d = document.createElement('b');
+    d.className = "toremember";
+    d.textContent = `${i}/${m}/2025 ; thing`;
+    document.body.appendChild(d);
+    document.body.appendChild(document.createElement("br"));
+    if (i == 30) {
+      m++;
     }
+  }
+}
   </script>
   <a href="https://google.com/search?q=fatfatmillycat" id="bttn"> Awesome button </a>
 <h1 id="cool"> CHECK OUT MY FAVORITE ARTIST <a href="https://youtube.com/@Diabarha">!!!!!!!</a> </h1>
