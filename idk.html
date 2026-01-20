@@ -25,8 +25,8 @@
       var w = window.innerWidth;
       var h = window.innerHeight;
 
-      var posX = Math.random(0,w)
-      var posY = Math.random(0,h)
+      var posX = Math.floor(Math.random() * w) +1
+      var posY = Math.floor(Math.random() * h) +1
       console.log(posX + " " + posY)
     }
   </script>
