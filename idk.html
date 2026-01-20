@@ -14,7 +14,7 @@
 }
   </style>
 
-  <h1 id="title"> SK2K live execution </h1>
+  <h1 id="title"> Whatever the fuck this is </h1>
   <scripting id="jesus"></scripting>
   <button onclick="explode()">Execute</button>
   <div>
@@ -22,12 +22,12 @@
   </div>
   <script>
     function explode() {
-      var elems = document.body.getElementsByTagName("*");
-      for (var elem of elems) {
-        console.log(elem);
-        var omaga=elem.outerHTML;
-        if (omaga.includes("<script")) {console.log("its a sckript !!")}
-      }
+      var w = window.innerWidth;
+      var h = window.innerHeight;
+
+      var posX = Math.random(0,w)
+      var posY = Math.random(0,h)
+      console.log(posX + " " + posY)
     }
   </script>
 </html>
