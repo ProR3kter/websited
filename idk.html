@@ -27,12 +27,14 @@
 
       var posX = Math.floor(Math.random() * w) +1
       var posY = Math.floor(Math.random() * h) +1
-      var thetext = fetch("https://raw.githubusercontent.com/iblh/not-cat/refs/heads/master/urls/cat/cat-urls.txt")
-        .then(res => res.text())
-        .then(text => console.log(text))
-        .catch(err => console.error(err));
-      const lines = thetext.split(/\r?\n/);
-      console.log(lines);
+    const res = await fetch(
+      "https://raw.githubusercontent.com/iblh/not-cat/refs/heads/master/urls/cat/cat-urls.txt"
+    );
+
+    const thetext = await res.text();
+    const lines = thetext.split(/\r?\n/);
+
+    console.log(lines);
       
     }
   </script>
