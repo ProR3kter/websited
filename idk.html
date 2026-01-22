@@ -20,30 +20,33 @@
   <div>
     >>
   </div>
-  <script>
-    async function explode() {
-      var w = window.innerWidth;
-      var h = window.innerHeight;
+<script>
+  async function explode() {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
 
-      var posX = Math.floor(Math.random() * w) +1
-      var posY = Math.floor(Math.random() * h) +1
+    const posX = Math.floor(Math.random() * w);
+    const posY = Math.floor(Math.random() * h);
+
     const res = await fetch(
       "https://raw.githubusercontent.com/iblh/not-cat/refs/heads/master/urls/cat/cat-urls.txt"
     );
-  var d = document.createElement('img');
 
-  const thetext = await res.text();
-  const lines = thetext.split(/\r?\n/);
+    const text = await res.text();
+    const lines = text.split(/\r?\n/).filter(Boolean);
 
-  const randomIndex = Math.floor(Math.random() * lines.length) + 1;
-  d.src = lines[randomIndex];
+    const randomIndex = Math.floor(Math.random() * lines.length);
+
+    const d = document.createElement("img");
+    d.src = lines[randomIndex];
+
     d.style.position = "absolute";
     d.style.left = posX + "px";
     d.style.top = posY + "px";
-  document.body.appendChild(d);
 
-    console.log(lines);
-      
-    }
-  </script>
+    document.body.appendChild(d);
+
+    console.log("Image URL:", d.src);
+  }
+</script>
 </html>
