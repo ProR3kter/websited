@@ -30,9 +30,17 @@
     const res = await fetch(
       "https://raw.githubusercontent.com/iblh/not-cat/refs/heads/master/urls/cat/cat-urls.txt"
     );
+  var d = document.createElement('img');
 
-    const thetext = await res.text();
-    const lines = thetext.split(/\r?\n/);
+  const thetext = await res.text();
+  const lines = thetext.split(/\r?\n/);
+
+  const randomIndex = Math.floor(Math.random() * lines.length) + 1;
+  d.src = lines[randomIndex];
+    d.style.position = "absolute";
+    d.style.left = posX + "px";
+    d.style.top = posY + "px";
+  document.body.appendChild(d);
 
     console.log(lines);
       
