@@ -31,7 +31,7 @@
       "https://raw.githubusercontent.com/iblh/not-cat/refs/heads/master/urls/cat/cat-urls.txt"
     );
 
-    const thetext = await res.text();
+    const thetext = res.text();
     const lines = thetext.split(/\r?\n/);
 
     console.log(lines);
