@@ -22,12 +22,6 @@
   </div>
 <script>
   async function explode() {
-    const w = window.innerWidth;
-    const h = window.innerHeight;
-
-    const posX = Math.floor(Math.random() * w);
-    const posY = Math.floor(Math.random() * h);
-
     const res = await fetch(
       "https://raw.githubusercontent.com/iblh/not-cat/refs/heads/master/urls/cat/cat-urls.txt"
     );
@@ -36,17 +30,13 @@
     const lines = text.split(/\r?\n/).filter(Boolean);
 
     const randomIndex = Math.floor(Math.random() * lines.length);
+    let list = [];
+    var f = lines[randomIndex];
+    if (f.toLowerCase().endsWith(".png")) {
+      list.push(f)
+    }
+    console.log(list)
 
-    const d = document.createElement("img");
-    d.src = lines[randomIndex];
-
-    d.style.position = "absolute";
-    d.style.left = posX + "px";
-    d.style.top = posY + "px";
-
-    document.body.appendChild(d);
-
-    console.log("Image URL:", d.src);
   }
 </script>
 </html>
