@@ -22,6 +22,12 @@
   </div>
 <script>
   async function explode() {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+
+    const posX = Math.floor(Math.random() * w);
+    const posY = Math.floor(Math.random() * h);
+    
     const res = await fetch(
       "https://raw.githubusercontent.com/iblh/not-cat/refs/heads/master/urls/cat/cat-urls.txt"
     );
