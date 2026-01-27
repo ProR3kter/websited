@@ -32,8 +32,8 @@
     const randomIndex = Math.floor(Math.random() * lines.length);
     let list = [];
     var f = lines[randomIndex];
-    for (let i = 0; i < list.length; i++){
-          if (list[i].toLowerCase().endsWith(".jpg")) {
+    for (let i = 0; i < lines.length; i++){
+          if (lines.toLowerCase().endsWith(".jpg")) {
       list.push(list[i]);
     }
     }
