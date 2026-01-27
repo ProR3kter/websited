@@ -28,16 +28,22 @@
 
     const text = await res.text();
     const lines = text.split(/\r?\n/).filter(Boolean);
-
-    const randomIndex = Math.floor(Math.random() * lines.length);
     let list = [];
-    var f = lines[randomIndex];
     for (let i = 0; i < lines.length; i++){
           if (lines[i].toLowerCase().endsWith(".jpg")) {
       list.push(lines[i]);
     }
     }
-    console.log(list)
+    const randomIndex = Math.floor(Math.random() * lines.length);
+    const d = document.createElement("img");
+    d.src = list[randomIndex];
+
+    d.style.position = "absolute";
+    d.style.left = posX + "px";
+    d.style.top = posY + "px";
+
+    document.body.appendChild(d);
+    
 
   }
 </script>
