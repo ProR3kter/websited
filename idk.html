@@ -40,6 +40,7 @@
       list.push(lines[i]);
     }
     }
+    try {
     const randomIndex = Math.floor(Math.random() * lines.length);
     const d = document.createElement("img");
     d.src = list[randomIndex];
@@ -49,6 +50,7 @@
     d.style.top = posY + "px";
 
     document.body.appendChild(d);
+    } catch {};
     
 
   }
